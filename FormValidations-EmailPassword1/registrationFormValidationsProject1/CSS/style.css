@@ -8,3 +8,28 @@ html {
   font-family: 'Roboto', sans-serif;
   font-size: 62.5%;
 }
+.main-repository {
+  width: 100vw;
+  display: flex;
+}
+.left-repository {
+  height: 100vh;
+  background: #f3871e;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+}
+.left-content__repository {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.left-image__repository {
+  width: 15rem;
+  margin-bottom: 2rem;
+}
+.hide {
+  display: none;
+}
