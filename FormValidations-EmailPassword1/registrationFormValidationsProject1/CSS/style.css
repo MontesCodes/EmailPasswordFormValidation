@@ -27,7 +27,7 @@ html {
   align-items: center;
 }
 .left-image__repository {
-  width: 15rem;
+  /* width: 15rem; */ /* pushed image to far to the right */
   margin-bottom: 2rem;
 }
 .form-repository {
@@ -127,6 +127,10 @@ right-repository::before {
   font-size: 12rem;
   font-weight: 900;
   color: #ffc408;
+}
+.heading-light,
+.heading-bold {
+  text-align: center;
 }
 .hide {
   display: none;
