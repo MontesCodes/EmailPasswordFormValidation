@@ -131,7 +131,61 @@ right-repository::before {
 .heading-light,
 .heading-bold {
   text-align: center;
+  letter-spacing: 1rem;
+  line-height: 12rem;
+}
+.footer {
+  width: 100%;
+  background: #f3871e;
+}
+.footer p {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: #fff;
+}
+.footer i {
+  color: red;
+}
+.footer a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
 }
 .hide {
   display: none;
+}
+@media (max-width: 1550px) {
+  .left-repository {
+    flex-basis: 30%;
+  }
+  .right-repository {
+    flex-basis: 70%;
+  }
+}
+@media (max-width: 1152px) {
+  .left-repository {
+    flex-basis: 35%;
+  }
+  .right-repository {
+    flex-basis: 65%;
+  }
+  .heading-light,
+  .heading-bold {
+    font-size: 5rem;
+    line-height: 6rem;
+  }
+}
+@media (max-width: 970px) {
+  .left-repository {
+    flex-basis: 50%;
+  }
+  .right-repository {
+    flex-basis: 50%;
+  }
+  .heading-light,
+  .heading-bold {
+    font-size: 5rem;
+    line-height: 6rem;
+  }
 }
