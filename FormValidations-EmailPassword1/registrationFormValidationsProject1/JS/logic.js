@@ -1,9 +1,13 @@
-const signupLink = document.querySelector('#signup-link');
-const loginLink = document.querySelector('#login-link');
-const signUpForm = document.querySelector('.form-container__signup');
-const loginForm = document.querySelector('.form-container__login');
+const signUpLink = document.querySelector('#signup-link');
+const logInLink = document.querySelector('#login-link');
+const signUpForm = document.querySelector('.form-repository__signup');
+const logInForm = document.querySelector('.form-repository__login');
 
-signupLink.addEventListener('click', () => {
-    document.querySelector('#login-form').classList.add('hidden');
-    document.querySelector('#signup-form').classList.remove('hidden');
-}
+signUpLink.addEventListener('click', () => {
+  signUpForm.classList.remove('hide');
+  logInForm.classList.add('hide');
+});
+logInLink.addEventListener('click', () => {
+  signUpForm.classList.add('hide');
+  logInForm.classList.remove('hide');
+});
