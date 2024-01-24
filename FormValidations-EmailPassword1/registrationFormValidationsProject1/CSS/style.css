@@ -145,12 +145,12 @@ right-repository::before {
   color: #fff;
 }
 .footer i {
-  color: red;
+  color: blueviolet;
 }
 .footer a {
   text-decoration: none;
   color: black;
-  font-weight: 700;
+  font-weight: 800;
 }
 .hide {
   display: none;
@@ -176,6 +176,7 @@ right-repository::before {
     line-height: 6rem;
   }
 }
+
 @media (max-width: 970px) {
   .left-repository {
     flex-basis: 50%;
@@ -185,7 +186,15 @@ right-repository::before {
   }
   .heading-light,
   .heading-bold {
-    font-size: 6rem;
-    line-height: 6rem;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+@media (max-width: 670px) {
+  .left-repository {
+    flex-basis: 100%;
+  }
+  .right-repository {
+    display: none;
   }
 }
