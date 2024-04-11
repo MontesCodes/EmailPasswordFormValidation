@@ -7,6 +7,7 @@ signUpLink.addEventListener('click', () => {
   signUpFormRepository.classList.remove('hide');
   logInFormRepository.classList.add('hide');
 });
+
 logInLink.addEventListener('click', () => {
   signUpFormRepository.classList.add('hide');
   logInFormRepository.classList.remove('hide');
