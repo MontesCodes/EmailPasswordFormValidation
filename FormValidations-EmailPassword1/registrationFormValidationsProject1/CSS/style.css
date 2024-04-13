@@ -28,7 +28,8 @@ html {
 }
 .left-image__repository {
   /* width: 15rem; */ /* pushed image to far to the right */
-  margin-bottom: 2rem;
+  width: 100%;
+  margin-bottom: 5%;
 }
 .form-repository {
   width: 100%;
