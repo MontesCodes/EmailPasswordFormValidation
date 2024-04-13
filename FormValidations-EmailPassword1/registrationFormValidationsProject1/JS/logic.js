@@ -15,3 +15,13 @@ logInLink.addEventListener('click', () => {
   signUpFormRepository.classList.add('hide');
   logInFormRepository.classList.remove('hide');
 });
+
+loginForm.addEventListener('submit', events => {
+  events.preventDefault();
+  const emailInput = loginForm.querySelector('#email');
+  const passwordInput = loginForm.querySelector('#password');
+
+  if (!emailInput.value) {
+    const msg = emailInput.closest('div').previousElementSibling;
+  }
+});
