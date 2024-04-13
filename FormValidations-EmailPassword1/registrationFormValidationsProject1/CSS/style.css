@@ -184,13 +184,13 @@ right-repository::before {
   .right-repository {
     flex-basis: 50%;
   }
-  .heading-light,
+  /* .heading-light,
   .heading-bold {
     font-size: 2rem;
     line-height: 3rem;
-  }
+  } */
 }
-@media (max-width: 670px) {
+@media (max-width: 770px) {
   .left-repository {
     flex-basis: 100%;
   }
