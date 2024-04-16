@@ -23,5 +23,12 @@ loginForm.addEventListener('submit', events => {
 
   if (!emailInput.value) {
     const msg = emailInput.closest('div').previousElementSibling;
+    // console.log(msg);
+    msg.textContent = 'invalid email!!';
+    msg.style.visibility = 'visible';
+
+    setTimeout(() => {
+      msg.style.visibility = 'hidden';
+    }, 3000);
   }
 });
