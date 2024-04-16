@@ -21,14 +21,16 @@ loginForm.addEventListener('submit', events => {
   const emailInput = loginForm.querySelector('#email');
   const passwordInput = loginForm.querySelector('#password');
 
-  if (!emailInput.value) {
-    const msg = emailInput.closest('div').previousElementSibling;
-    // console.log(msg);
-    msg.textContent = 'invalid email!!';
-    msg.style.visibility = 'visible';
-
-    setTimeout(() => {
-      msg.style.visibility = 'hidden';
-    }, 3000);
-  }
+  if (!emailInput.value.trim()) flashMessage(emailInput, 'invalid email!!');
 });
+
+const flashMessage = (element, message) => {
+  const msg = element.closest('div').previousElementSibling;
+  // console.log(msg);
+  msg.textContent = 'invalid email!!';
+  msg.style.visibility = 'visible';
+
+  setTimeout(() => {
+    msg.style.visibility = 'hidden';
+  }, 3000);
+};
