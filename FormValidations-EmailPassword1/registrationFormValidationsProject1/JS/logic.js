@@ -40,13 +40,13 @@ const flashMessage = (element, message) => {
   }, 3000);
 };
 
+const validateEmail2 = checkEmail2 => {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(String(checkEmail2).toLowerCase());
+};
+
 // const validateEmail1 = checkEmail1 => {
 //   return checkEmail1.match(
 //     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
 //   );
 // };
-
-const validateEmail2 = checkEmail2 => {
-  var re = /\S+@\S+\.\S+/;
-  return re.test(String(checkEmail2).toLowerCase());
-};
