@@ -22,6 +22,10 @@ loginForm.addEventListener('submit', events => {
   const passwordInput = loginForm.querySelector('#password');
 
   if (!emailInput.value.trim()) flashMessage(emailInput, 'invalid email!!');
+  if (!passwordInput.value.trim())
+    flashMessage(passwordInput, 'invalid password!!');
+
+  const areEmailsValid = validateEmail1(emailInput.value.trim());
 });
 
 const flashMessage = (element, message) => {
@@ -33,4 +37,15 @@ const flashMessage = (element, message) => {
   setTimeout(() => {
     msg.style.visibility = 'hidden';
   }, 3000);
+};
+
+const validateEmail1 = checkEmail1 => {
+  return checkEmail1.match(
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+  );
+};
+
+const validateEmail2 = checkEmail2 => {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(String(checkEmail2).toLowerCase());
 };
