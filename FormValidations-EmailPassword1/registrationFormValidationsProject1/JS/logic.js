@@ -30,6 +30,29 @@ loginForm.addEventListener('submit', events => {
     flashMessage(emailInput, 'invalid email!!');
 });
 
+signupForm.addEventListener('submit', events => {
+  events.preventDefault();
+  const email = signupForm.querySelector('#signup-email');
+  const password = signupForm.querySelector('#signup-password');
+  const confirmPassword = signupForm.querySelector('#signup-confirm-password');
+
+  if (!email.value.trim()) flashMessage(email, 'email is really required!!');
+
+  const isEmailValid = validateEmail2(email.value.trim());
+  if (!isEmailValid && email.value.trim())
+    flashMessage(email, 'Hey! invalid email!!');
+
+  if (!password.value.trim())
+    flashMessage(password, 'Hey! password is empty!!');
+
+  if (
+    !password.value.trim().length < 10 &&
+    email.value.trim() &&
+    password.value.trim()
+  )
+    flashMessage(password, 'Hey! password must be at least 10 characters!!');
+});
+
 const flashMessage = (element, message) => {
   const msg = element.closest('div').previousElementSibling;
   msg.textContent = message;
